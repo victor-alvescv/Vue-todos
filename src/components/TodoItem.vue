@@ -42,7 +42,7 @@ defineEmits(["toggle-complete", "edit-todo", "update-todo", "delete-todo"]);
         icon="material-symbols:check-circle-outline"
         width="22px"
         height="22px"
-        style="color: rgb(34, 159, 209)"
+        style="color: #752dc7"
         class="icon"
         @click="$emit('edit-todo', index)"
         v-if="todo.isEditing"
@@ -51,7 +51,7 @@ defineEmits(["toggle-complete", "edit-todo", "update-todo", "delete-todo"]);
         icon="ph:pencil"
         width="22px"
         height="22px"
-        style="color: rgb(34, 159, 209)"
+        style="color: #752dc7"
         class="icon"
         @click="$emit('edit-todo', index)"
         v-else
@@ -60,7 +60,7 @@ defineEmits(["toggle-complete", "edit-todo", "update-todo", "delete-todo"]);
         icon="ph:trash-light"
         width="22px"
         height="22px"
-        style="color: #f95e5e"
+        style="color: #888888;"
         class="icon"
         @click="$emit('delete-todo', todo.id)"
       />
@@ -99,7 +99,7 @@ input[type="checkbox"] {
   transition: all 300ms ease;
 
   &:checked {
-    background-color: #2dc7c7;
+    background-color: #752dc7;
   }
 }
 li {
@@ -136,6 +136,7 @@ li {
 
   .todo {
     flex: 1;
+    margin-right: 20px;
 
     p {
       color: #a1a1a1;
@@ -146,7 +147,7 @@ li {
 
     .completed-todo {
       text-decoration: line-through;
-      text-decoration-color: rgb(139, 9, 9);
+      text-decoration-color: #752dc7;
       text-decoration-thickness: 2px;
     }
 

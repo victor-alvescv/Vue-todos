@@ -1,11 +1,15 @@
 <script setup>
 import { RouterView } from "vue-router";
 import TodoHeader from "./components/TodoHeader.vue";
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+// ..
+AOS.init();
 
 </script>
 
 <template>
-  <TodoHeader />
+  <TodoHeader data-aos="fade-in" />
   <RouterView />
 </template>
 
