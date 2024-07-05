@@ -98,8 +98,22 @@ const deleteTodo = (todoId) => {
       <span>Todo List is empty...</span>
     </p>
     <p v-if="todoCompleted && todoList.length > 0" class="todos-msg">
-      <Icon icon="noto-v1:party-popper" />
-      <span>You have completed all your todos!</span>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="size-6"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="m20.25 7.5-.625 10.632a2.25 2.25 0 0 1-2.247 2.118H6.622a2.25 2.25 0 0 1-2.247-2.118L3.75 7.5M10 11.25h4M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125Z"
+        />
+      </svg>
+
+      <span>No remaining Todos...</span>
     </p>
   </main>
 </template>
@@ -131,9 +145,11 @@ main {
   }
   .todo-list {
     display: flex;
-    flex-direction: column;
     list-style: none;
-    margin-top: 24px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 32px;
     gap: 20px;
   }
 
