@@ -25,7 +25,12 @@ import { RouterLink } from "vue-router";
             d="M10.5 6h9.75M10.5 6a1.5 1.5 0 1 1-3 0m3 0a1.5 1.5 0 1 0-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-9.75 0h9.75"
           />
         </svg>
-        <p class="hide--text" style="background-color: transparent; padding: 0; margin: 5px">in process...</p>
+        <p
+          class="hide--text"
+          style="background-color: transparent; padding: 0; margin: 5px"
+        >
+          in process...
+        </p>
       </div>
       <ul class="nav-routes">
         <div class="routes--wrapper">
@@ -94,7 +99,7 @@ header {
         font-weight: 400;
         font-style: italic;
         position: absolute;
-        left: 16%;
+        left: 12%;
         top: 12%;
       }
 
@@ -124,7 +129,7 @@ header {
           padding: 6px 2px;
         }
         &:hover ~ .hide--text {
-          opacity: 1
+          opacity: 1;
         }
       }
     }
@@ -181,6 +186,16 @@ header {
         border: 1.5px solid hsla(0, 0%, 100%, 0.14);
         border-radius: 50%;
         padding: 5px;
+        transition: all 300ms ease;
+        cursor:pointer;
+
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+
+      img {
+        cursor: pointer
       }
 
       .note-ball {
@@ -196,7 +211,7 @@ header {
   .special__route {
     border: 1px solid hsla(0, 0%, 100%, 0.14);
     padding: 8px 10px;
-    border-radius: 3px;
+    border-radius: 6px;
     cursor: pointer;
     transition: color 300ms ease;
     transition: background-color 500ms ease;
