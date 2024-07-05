@@ -38,7 +38,7 @@ defineEmits(["toggle-complete", "edit-todo", "update-todo", "delete-todo"]);
         icon="material-symbols:check-circle-outline"
         width="22px"
         height="22px"
-        style="color: #41b080"
+        style="color: rgb(34, 159, 209)"
         class="icon"
         @click="$emit('edit-todo', index)"
         v-if="todo.isEditing"
@@ -47,7 +47,7 @@ defineEmits(["toggle-complete", "edit-todo", "update-todo", "delete-todo"]);
         icon="ph:pencil"
         width="22px"
         height="22px"
-        style="color: #41b080"
+        style="color: rgb(34, 159, 209);"
         class="icon"
         @click="$emit('edit-todo', index)"
         v-else
@@ -69,8 +69,11 @@ li {
   display: flex;
   align-items: center;
   gap: 10px;
+  border-radius: 5px;
   padding: 16px 10px;
-  background-color: #f1f1f1;
+  background-color: black;
+  color: #ededed;
+  border: 1px solid gray;
   box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
     0 8px 10px -6px rgb(0 0 0 / 0.1);
 
